@@ -1,0 +1,61 @@
+﻿<Window x:Class="DanmachiRerollBannerClicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DanmachiRerollBannerClicker"
+        mc:Ignorable="d"
+        Title="Danmchi Battle Chronicle Rerollbanner Clicker" Height="940" Width="1450">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0 0 5 0"/>
+            <Setter Property="Padding" Value="10 0 "/>
+        </Style>
+        <Style TargetType="Grid">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="MinWidth" Value="50"/>
+            <Setter Property="Margin" Value="0 0 5 0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0 0 5 0"/>
+            <Setter Property="Padding" Value="10 0 "/>
+        </Style>
+    </Window.Resources>
+    
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="FPS:"/>
+            <TextBox x:Name="TB_FPS" Text="120" TextChanged="TB_FPS_TextChanged"/>
+            <Button x:Name="Btn_Start" Click="Btn_Start_Click"  Content="Start"/>
+            <Button x:Name="Btn_Stop" Click="Btn_Stop_Click" IsEnabled="False"  Content="Stop"/>
+            <Label Content="Running Processes"/>
+            <ComboBox x:Name="CB_Processes" SelectedIndex="0" Width="100"/>
+            <Button x:Name="Btn_SearchProcesses" Click="Btn_SearchProcesses_Click" Content="Search Processes"/>
+            <Label Content="Current State:"/>
+            <Label x:Name="LBL_CurrentState" FontWeight="Regular"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 5 0 0">
+            <Label Content="Min. UR to Find:"/>
+            <TextBox x:Name="TB_MinUR" Text="5" TextChanged="TB_MinUR_TextChanged"/>
+        </StackPanel>
+
+        <Image Grid.Row="2" x:Name="Img_Captured"/>
+
+    </Grid>
+</Window>
