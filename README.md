@@ -13,7 +13,7 @@ This bot still could have some bugs. I tried to develop it as much save as i cou
 When you found issues or have new ideas, please open a new issues ticket on top. 💙
 
 ## This Bot has some requirements:
-- User the PC Client in Windows Mode!
+- Use the PC Client in Windows Mode!
 - The Resolution ingame has to be 1600x900 otherwise it may won't work!
 - The game has to be in front of every other Windows allways!
 - Do your reroll one time manually until u see the Gacha Result Screen! ![Result Screen](https://djnemas.de/SX/danchro_YmApeO8XHU.png)
